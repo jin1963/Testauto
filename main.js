@@ -12,7 +12,7 @@ async function connectWallet() {
       document.getElementById("walletAddress").innerText = "✅ " + userAccount;
 
       contract = new web3.eth.Contract(contractABI, contractAddress);
-      usdt = new web3.eth.Contract(usdtABI, usdtAddress);
+      usdt = new web3.eth.Contract(erc20ABI, usdtAddress);
 
       let ref = new URLSearchParams(window.location.search).get("ref");
       if (!ref) ref = localStorage.getItem("ref");
