@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>KJC Referral + Auto-Staking</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>KJC Referral + Auto-Staking</h1>
+    <p id="walletAddress">❌ Wallet not connected</p>
+    <button onclick="connectWallet()">Connect Wallet</button>
+
+    <hr />
+    <h2>Referral</h2>
+    <input type="text" id="refAddress" placeholder="Referrer Address" />
+    <button onclick="registerReferrer()">Register Referrer</button>
+
+    <h2>Buy KJC with USDT</h2>
+    <input type="number" id="usdtAmount" placeholder="Enter USDT amount" min="10" step="0.01" />
+    <button onclick="buyToken()">Purchase & Auto-Stake</button>
+
+    <h2>Claim Rewards</h2>
+    <button onclick="claimReferralReward()">Claim Referral Reward</button>
+
+    <hr />
+    <h2>Your Stakes</h2>
+    <div id="stakeList"></div>
+  </div>
+
+  <!-- ✅ JavaScript files ใส่ล่างสุดให้ DOM โหลดครบก่อน -->
+  <script src="https://cdn.jsdelivr.net/npm/web3@1.10.0/dist/web3.min.js"></script>
+  <script src="config.js"></script>
+  <script src="abi.js"></script>
+  <script src="erc20Abi.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
