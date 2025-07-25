@@ -15,8 +15,16 @@
   <div class="container">
     <h1>KJC Referral + Auto-Staking</h1>
     <p id="walletAddress">❌ Wallet not connected</p>
-    <button onclick="connectWallet()">Connect Wallet</button>
-    <button onclick="registerReferrer()">Register Referrer</button>
+<button id="connectWallet">Connect Wallet</button>
+
+<div id="actionSection" style="display:none;">
+  <input type="number" id="usdtAmount" placeholder="Enter USDT amount" />
+  <button id="purchaseButton">Purchase & Auto-Stake</button>
+  <button id="registerReferrer">Register Referrer</button>
+  <button id="claimReferral">Claim Referral Reward</button>
+
+  <div id="stakeList"></div>
+</div>
 
     <div id="actionSection" style="display:none">
       <hr />
