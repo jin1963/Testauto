@@ -106,4 +106,9 @@ async function loadStakes() {
     `;
     stakeList.appendChild(div);
   }
-}
+}window.addEventListener("load", () => {
+  document.getElementById("connectWallet").addEventListener("click", connectWallet);
+  document.getElementById("registerReferrer").addEventListener("click", registerReferrer);
+  document.getElementById("purchaseButton").addEventListener("click", purchase);
+  document.getElementById("claimReferral").addEventListener("click", claimReferralReward);
+});
